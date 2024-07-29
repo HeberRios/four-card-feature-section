@@ -25,6 +25,7 @@
     src: url("./fonts/poppins-v21-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+/* CSS VARIABLES */
 :root {
     /* ## Colors */
 
@@ -55,10 +56,10 @@
     --fw-bold: 600;
 }
 
+/* CSS RESET */
 /*
 	1. Use a more-intuitive box-sizing model.
 */
-
 *,
 *::before,
 *::after {
@@ -117,6 +118,12 @@ h6 {
 #root,
 #__next {
     isolation: isolate;
+}
+
+body {
+    min-height: 100vh;
+    font-family: var(--ff-regular);
+    background-color: var(--clr-very-light-gray);
 }
 
 .attribution {

@@ -120,10 +120,99 @@ h6 {
     isolation: isolate;
 }
 
+/* GENERAL STYLES */
 body {
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    gap: 4rem;
     font-family: var(--ff-regular);
     background-color: var(--clr-very-light-gray);
+}
+
+header,
+main {
+    width: 100%;
+}
+
+h1,
+h2 {
+    color: var(--clr-very-dark-blue);
+}
+
+p {
+    color: var(--clr-grayish-blue);
+}
+
+/* HEADER STYLES */
+header {
+    h1 {
+        margin-top: 3rem;
+        font-size: 1.5rem;
+        font-weight: var(--fw-light);
+        text-align: center;
+
+        span {
+            display: block;
+            font-weight: var(--fw-bold);
+        }
+    }
+
+    p:nth-child(2) {
+        font-size: 0.875rem;
+        margin-top: 1rem;
+        text-align: center;
+    }
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1.25rem;
+
+    .functionality-card:nth-child(1) {
+        border-top: 0.3rem solid var(--clr-cyan);
+    }
+
+    .functionality-card:nth-child(2) {
+        border-top: 0.3rem solid var(--clr-red);
+    }
+
+    .functionality-card:nth-child(3) {
+        border-top: 0.3rem solid var(--clr-orange);
+    }
+
+    .functionality-card:nth-child(4) {
+        border-top: 0.3rem solid var(--clr-blue);
+    }
+}
+
+/* FUNCTIONALITY CARD STYLES */
+.functionality-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 1.5rem;
+    border-radius: 0.3rem;
+    background-color: white;
+    box-shadow: 0 0.2rem 0.6rem 0 var(--clr-grayish-blue);
+
+    h2 {
+        font-size: 1.125rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    img {
+        max-width: 3.5rem;
+        margin-top: 2rem;
+        align-self: end;
+    }
 }
 
 .attribution {
